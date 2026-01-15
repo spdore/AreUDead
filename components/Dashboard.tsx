@@ -146,6 +146,12 @@ const Dashboard: React.FC<DashboardProps> = ({ appState, onCheckIn, onTriggerEme
                 >
                   立即发送 SOS
                 </button>
+                <button
+                  onClick={onCheckIn}
+                  className="w-full py-3 rounded-2xl bg-surface border border-white/10 text-white font-medium text-sm hover:bg-surface_light transition-all active:scale-95"
+                >
+                  解除警报 / 我很安全
+                </button>
              </div>
           ) : (
             <button
