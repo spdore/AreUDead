@@ -1,0 +1,7 @@
+{
+  "name": "Are U Dead?",
+  "description": "A personal safety check-in system. Tracks your activity and prepares emergency protocols if you fail to check in.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

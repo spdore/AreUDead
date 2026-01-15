@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://picsum.photos/32/32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Are U Dead?</title>
+    <!-- We keep Tailwind via CDN for simplicity in this specific setup, 
+         though in a full prod app you'd likely install it via npm -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#09090b', // Zinc 950
+              surface: '#18181b', // Zinc 900
+              surface_light: '#27272a', // Zinc 800
+              primary: '#ef4444', // Red 500
+              primary_dark: '#7f1d1d', // Red 900
+              safe: '#10b981', // Emerald 500
+              warning: '#f59e0b', // Amber 500
+              text_main: '#f4f4f5', // Zinc 100
+              text_muted: '#a1a1aa', // Zinc 400
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Segoe UI', 'Roboto', 'sans-serif'],
+              mono: ['SF Mono', 'Menlo', 'Monaco', 'Courier New', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'breath': 'breath 4s ease-in-out infinite',
+            },
+            keyframes: {
+              breath: {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.8' },
+                '50%': { transform: 'scale(1.05)', opacity: '1' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #09090b;
+        color: #f4f4f5;
+        -webkit-font-smoothing: antialiased;
+        overscroll-behavior-y: none;
+      }
+      /* Hide scrollbar */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      /* Smooth transitions */
+      * {
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
